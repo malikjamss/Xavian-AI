@@ -26,7 +26,6 @@ module.exports = {
         for (const [reactEmoji, triggers] of Object.entries(reactWord)) {
             if (triggers.some(trigger => messageBody === trigger)) {
                 api.setMessageReaction(reactEmoji, event.messageID, true);
-                return; // Exit loop after first match
             }
         }
 
@@ -34,7 +33,6 @@ module.exports = {
         for (const [reactEmoji, triggers] of Object.entries(reactWords)) {
             if (triggers.some(trigger => messageBody.includes(trigger))) {
                 api.setMessageReaction(reactEmoji, event.messageID, true);
-                return; // Exit loop after first match
             }
         }
 
