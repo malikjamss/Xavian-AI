@@ -5,7 +5,7 @@ module.exports = {
   config: {
     name: "approve",
     aliases: ["app"],
-    author: "Tite", // don't change my credit
+    author: "???", // don't change my credit
     countDown: 0,
     role: 2,
     category: "admin",
