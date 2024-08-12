@@ -17,6 +17,10 @@ module.exports = function (sequelize) {
 			type: DataTypes.BIGINT,
 			defaultValue: 0
 		},
+		lives: {
+			type: DataTypes.BIGINT,
+			defaultValue: 5
+		},
 		banned: {
 			type: DataTypes.JSON,
 			defaultValue: {}
