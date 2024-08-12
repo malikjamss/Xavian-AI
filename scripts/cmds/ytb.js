@@ -352,4 +352,34 @@ async function getVideoInfo(id) {
                                 title: x.chapterRenderer.title.simpleText,
                                 start_time_ms: start_time,
                                 start_time: start_time / 1000,
-                                end_ti
+                                end_time_ms: end_time - start_time + start_time,
+                                end_time: (end_time - start_time + start_time) / 1000
+                        };
+                }),
+                thumbnails: thumbnail.thumbnails,
+                author: author,
+                channel: {
+                        id: owner.videoOwnerRenderer.navigationEndpoint.browseEndpoint.browseId,
+                        username: owner.videoOwnerRenderer.navigationEndpoint.browseEndpoint.canonicalBaseUrl,
+                        name: owner.videoOwnerRenderer.title.runs[0].text,
+                        thumbnails: owner.videoOwnerRenderer.thumbnail.thumbnails,
+                        subscriberCount: parseAbbreviatedNumber(owner.videoOwnerRenderer.subscriberCountText.simpleText)
+                }
+        };
+
+        return result;
+}
+
+function parseAbbreviatedNumber(string) {
+        const match = string
+                .replace(',', '.')
+                .replace(' ', '')
+                .match(/([\d,.]+)([MK]?)/);
+        if (match) {
+                let [, num, multi] = match;
+                num = parseFloat(num);
+                return Math.round(multi === 'M' ? num * 1000000 :
+                        multi === 'K' ? num * 1000 : num);
+        }
+        return null;
+}
