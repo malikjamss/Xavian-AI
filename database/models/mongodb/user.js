@@ -17,6 +17,10 @@ const userModel = new Schema({
 		type: Number,
 		default: 0
 	},
+	money: {
+		type: Number,
+		default: 5
+	},
 	banned: {
 		type: Object,
 		default: {}
