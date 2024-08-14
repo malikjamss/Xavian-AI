@@ -5,7 +5,7 @@ module.exports.config = {
   author: "Mirai Team",
   longDescription: "Hunt animals!",
   category: "Economy",
-  countdown: 3
+  countdown: 20
 };
 
 module.exports.onStart = async ({ event, api, usersData }) => {
