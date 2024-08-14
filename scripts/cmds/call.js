@@ -10,12 +10,16 @@ module.exports = {
     },
     onChat: async function ({ message, api, event }) {
         const { body, senderID, messageID, threadID } = event;
-        
+
         if (body.toLowerCase() === "xavian") {
             api.setMessageReaction("👍", messageID, () => {}, true);
             message.reply("kiss you?");
             setTimeout (() => {
-                message.send("Nah.")
+                if (senderID.includes("61557494398506")) {
+                    message.send("Ofc baby. <3")
+                } else {
+                    message.send("nah.")
+                }
             }, 3000)
         }
     }
