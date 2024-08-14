@@ -8,7 +8,7 @@ module.exports.config = {
   countDown: 20
 };
 
-module.exports.onStart = async ({ event, api, usersData }) => {
+module.exports.onStart = async ({ event, api, message, usersData }) => {
   const { threadID, messageID } = event;
   const animals = [
   { name: "Deer", emoji: "🦌" },
@@ -35,6 +35,5 @@ module.exports.onStart = async ({ event, api, usersData }) => {
   const userCoin = await usersData.get(event.senderID, "money")
 
   await usersData.set(event.senderID, { money: userCoin + coin })
-  const message = `You went hunting and caught a ${randomAnimal.name} ${animalEmoji}!\n\nYou recieved ${coin} coins.`;
-  api.sendMessage(message, messageID, threadID);
+  message.reply(`You went hunting and caught a ${randomAnimal.name} ${animalEmoji}!\n\nYou recieved ${coin} coins.`);
 };
