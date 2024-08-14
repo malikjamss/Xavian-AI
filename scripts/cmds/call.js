@@ -1,37 +1,22 @@
 module.exports = {
-
     config: {
-
-        name: "call", //not command
-
+        name: "call",
         role: 0,
-
         author: "Micazhla",
-
-        description: "not a command"
-
+        longDescription: "Not a command!"
     },
-
-    onStart: async function ({ }) {},
-
+    onStart: async function ({ message }) {
+        message.send("This is not a command.")
+    },
     onChat: async function ({ message, api, event }) {
-
-        const botMessage = ["Hello, how are you?", "How may I help today?", "I'm Xavian, your one and only friendly bot.", "Hey there! My prefix is -", "I'm here! Is there anything I can help?", "Gising pa ako, may maitutulong ba ako?", "How's your day?"];
-
-        const random = Math.floor(Math.random() * botMessage.length);
-
-        const randomIndex = botMessage[random];
-
+        const { body, senderID, messageID, threadID } = event;
         
-
-        if (event.body && event.body.toLowerCase() == "xavian") {
-
-            api.setMessageReaction("✅", event.messageID, () => {}, true);
-
-            api.sendMessage(randomIndex, event.threadID, event.messageID);
-
+        if (body.toLowerCase() === "xavian") {
+            api.setMessageReaction("👍", messageID, () => {}, true);
+            message.reply("kiss you?");
+            setTimeout (() => {
+                message.send("Nah.")
+            }, 3000)
         }
-
     }
-
 };
