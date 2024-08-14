@@ -1,14 +1,14 @@
 module.exports.config = {
         name: "animalhunt",
         version: "1.0.0",
-        hasPermssion: 0,
-        credits: "Mirai Team",
-        description: "Hunt animals!",
-        commandCategory: "Economy",
-        cooldowns: 900 // 15 minutes in seconds
+        role: 0,
+        author: "Mirai Team",
+        longDescription: "Hunt animals!",
+        category: "Economy",
+        countdown: 3
 };
 
-module.exports.run = async ({ event, api }) => {
+module.exports.onStart = async ({ event, api }) => {
         const { threadID } = event;
         const animals = [
                 { name: "Deer", emoji: "🦌" },
