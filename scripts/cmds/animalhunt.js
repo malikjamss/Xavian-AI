@@ -5,11 +5,11 @@ module.exports.config = {
   author: "Mirai Team",
   longDescription: "Hunt animals!",
   category: "Economy",
-  countdown: 20
+  countDown: 20
 };
 
 module.exports.onStart = async ({ event, api, usersData }) => {
-  const { threadID } = event;
+  const { threadID, messageID } = event;
   const animals = [
   { name: "Deer", emoji: "🦌" },
   { name: "Rabbit", emoji: "🐇" },
@@ -36,5 +36,5 @@ module.exports.onStart = async ({ event, api, usersData }) => {
 
   await usersData.set(event.senderID, { money: userCoin + coin })
   const message = `You went hunting and caught a ${randomAnimal.name} ${animalEmoji}!\n\nYou recieved ${coin} coins.`;
-  api.sendMessage(message, threadID);
+  api.sendMessage(message, messageID, threadID);
 };
