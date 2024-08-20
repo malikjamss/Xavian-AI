@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "xavianai606@gmail.com",
-    "password": "@1@xavian@2@",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -36,7 +36,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Xavian [ - ]",
+  "nickNameBot": "Zion [ - ]",
   "authorName": "Micazhla",
   "authorFB": "https://www.facebook.com/61557494398506",
   "authorEmail": "null",
