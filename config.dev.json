@@ -18,27 +18,27 @@
   },
   "adminBot": [
     "61557494398506",
-    "61564580427291",
+    "61565158634226",
     "100085149593953"
   ],
   "GOD": [
     "61557494398506",
-    ""
+    "61565158634226"
   ],
   "DEV": [
     "61557494398506",
-    ""
+    "61565158634226"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Zion [ - ]",
+  "nickNameBot": "WHAT'S UP ? ROSA [#]",
   "authorName": "Micazhla",
   "authorFB": "https://www.facebook.com/61557494398506",
   "authorEmail": "null",
-  "prefix": "-",
+  "prefix": "#",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
