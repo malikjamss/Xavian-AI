@@ -26,10 +26,10 @@ module.exports = {
 			session2: "noon",
 			session3: "afternoon",
 			session4: "evening",
-			welcomeMessage: "Connected.",
+			welcomeMessage: "What's up, everyone? Hey, I'm rosa! An AI Messenger ChatBot designed by Micah/Micazhla. My prefix is #. If you need some help with homeworks or assistant, you can use my command 'ai <your question here>', type #help to see the list of my commands. That's all, thank you for adding me here! ><\n\ntype '#callad <message>' to send a message to the admin of the bot if any issue will start.",
 			multiple1: "you",
 			multiple2: "you guys",
-			defaultWelcomeMessage: `Welcome, new member.`
+			defaultWelcomeMessage: `Wisiii welcomeee, hope you will enjoy your time here in {boxName} 😍🎀.`
 		}
 	},
 
