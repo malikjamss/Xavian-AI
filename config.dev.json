@@ -35,7 +35,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "WHAT'S UP ? ROSA [#]",
+  "nickNameBot": "Rosa | #",
   "authorName": "Micazhla",
   "authorFB": "https://www.facebook.com/61557494398506",
   "authorEmail": "null",
